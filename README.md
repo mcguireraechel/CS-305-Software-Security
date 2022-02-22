@@ -1,1 +1,16 @@
 # CS-305-Software-Security
+
+The client, Artemis Financial is a financial consulting company that develops individualized financial plans for savings, retirement, investments, and insurance for their patrons. Artemis Financial wants to implement and apply effective software security by taking steps to protect their clients data and financial information over their public web interface. When the web application is used to transfer data, they would like a verification step in the form of a checksum, which would add a verification step to their web application that would ensure secure communications. 
+
+I believe I did particularly well in identifying a secure hashing algorithm that would allow for the company to verify that the data being communicated hasn’t been manipulated in any way. I identified a hashing algorithm where if any piece of data was changed from the original data, the hashed value would change drastically. This means that the company can run a piece of data through the hashing algorithm, and if the data had been changed in ANY way, they would know based on the hashed value being different.
+This hashing algorithm adds to the security of the web application because it allows for data to be checked before allowing it to be entered into the system. Sometimes hackers use malicious data inputs in order to gain access or manipulate the system in a harmful matter. 
+
+By running a dependency check on the program i was able to identify some vulnerabilities found in the program. At times I found it somewhat difficult to identify where the problem lied in the program however, the dependency check also allowed for me to see problems that stemmed simply from outdated dependencies, for example, if I had a dependency on the Spring framework, but it was using a vulnerable, out of date version, the dependency check would show me that there is a vulnerability with that version and it should be updated. 
+
+To check whether the hashing algorithm was working as expected I ran multiple different pieces of data through the algorithm to determine that the hashed value came back different. This data manipulation also included slight variations such as changing capitalization and punctuation slightly. Each hashed value was different than the one before, confirming that the algorithm was working correctly. 
+
+In addition to adding security within the transfer of data, I also ensured secure communications by converting the HTTP protocol into an HTTPS protocol. In order to do this I created a self-signed certificate which allows for a user to use the HTTPS protocol, ensuring that they’re communicating with the correct web page. This reduces the likelihood that a false page is being used to cause attacks.
+
+In the future, the use of dependency checks will be specifically useful to identify any vulnerabilities that I would be able to fix in an application. Additionally, the use of hashing algorithms is specifically useful in determining if a piece of data has been manipulated in any way, adding a layer of security.
+
+This project demonstrates my working knowledge in security, specifically in the form of encryption algorithms and the use of HTTPS/self-signed certificates. This project also demonstrates the ability to use dependency checks in order to identify vulnerabilities that exist in the scope of the application.
